@@ -1,0 +1,38 @@
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Welcome Back</h2>
+        <div class="auth-options">
+            <!-- Email/Password Login Form -->
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button primary">Login</button>
+            </form>
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+            <!-- OAuth Login Options -->
+            <div class="oauth-options">
+                <button class="button oauth-42" id="login42">
+                    <img src="/assets/images/42-logo.svg" alt="42 Logo">
+                    <span>Login with 42</span>
+                </button>
+                <button id="mockLoginBtn" class="button secondary dev-only">
+                    Login as Mock User (Dev)
+                </button>
+            </div>
+
+            <div class="auth-links">
+                <a href="/register" class="auth-link">Don't have an account? Sign up</a>
+            </div>
+        </div>
+    </div>
+</div>

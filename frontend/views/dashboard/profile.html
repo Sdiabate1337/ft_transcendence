@@ -1,0 +1,54 @@
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-cover"></div>
+        <div class="profile-info">
+            <div class="profile-avatar">
+                <img src="" alt="Profile Picture" id="userProfilePic">
+                <button class="edit-avatar" id="editAvatar">
+                    <i class="icon-edit"></i>
+                </button>
+            </div>
+            <div class="profile-details">
+                <h2 id="profileUsername">Username</h2>
+                <p class="status" id="profileStatus">Online</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalGames">0</span>
+                        <span class="stat-label">Games</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="winRate">0%</span>
+                        <span class="stat-label">Win Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="rank">#0</span>
+                        <span class="stat-label">Rank</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-content">
+        <div class="profile-section match-history">
+            <h3>Match History</h3>
+            <div class="match-list" id="matchHistory">
+                <!-- Match history items will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="profile-section achievements">
+            <h3>Achievements</h3>
+            <div class="achievements-grid" id="achievementsList">
+                <!-- Achievement items will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="profile-section friends">
+            <h3>Friends</h3>
+            <div class="friends-list" id="friendsList">
+                <!-- Friend items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+</div>

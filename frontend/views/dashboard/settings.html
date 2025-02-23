@@ -1,0 +1,93 @@
+<div class="settings-container">
+    <h2>Settings</h2>
+
+    <!-- Profile Settings -->
+    <section class="settings-section">
+        <h3>Profile Settings</h3>
+        <div class="settings-form">
+            <div class="form-group">
+                <label for="displayName">Display Name</label>
+                <input type="text" id="displayName" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-input" disabled>
+            </div>
+            <div class="form-group">
+                <label>Profile Picture</label>
+                <div class="avatar-upload">
+                    <img src="" alt="Current Avatar" id="currentAvatar">
+                    <button class="button secondary" id="changeAvatar">Change Picture</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Settings -->
+    <section class="settings-section">
+        <h3>Game Settings</h3>
+        <div class="settings-form">
+            <div class="form-group">
+                <label for="controls">Controls</label>
+                <select id="controls" class="form-input">
+                    <option value="arrows">Arrow Keys</option>
+                    <option value="wasd">WASD Keys</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Game Sound</label>
+                <div class="range-slider">
+                    <input type="range" id="gameSound" min="0" max="100" value="50">
+                    <span class="range-value">50%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Settings -->
+    <section class="settings-section">
+        <h3>Privacy Settings</h3>
+        <div class="settings-form">
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="showOnline">
+                    Show Online Status
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="allowFriendRequests">
+                    Allow Friend Requests
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="allowGameInvites">
+                    Allow Game Invites
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two-Factor Authentication -->
+    <section class="settings-section">
+        <h3>Two-Factor Authentication</h3>
+        <div class="settings-form">
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="enable2FA">
+                    Enable Two-Factor Authentication
+                </label>
+            </div>
+            <div id="2faSetup" style="display: none;">
+                <!-- 2FA setup content will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Save Changes -->
+    <div class="settings-actions">
+        <button class="button primary" id="saveSettings">Save Changes</button>
+        <button class="button secondary" id="resetSettings">Reset to Default</button>
+    </div>
+</div>

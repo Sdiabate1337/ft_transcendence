@@ -1,0 +1,53 @@
+<div class="game-container">
+    <div class="game-header">
+        <h2>Pong Game</h2>
+        <div class="game-controls">
+            <button class="button primary" id="quickMatch">Quick Match</button>
+            <button class="button secondary" id="createCustom">Custom Game</button>
+            <button class="button accent" id="practiceAI">Practice with AI</button>
+        </div>
+    </div>
+
+    <div class="game-main">
+        <!-- Game Canvas Container -->
+        <div class="game-canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            <div class="game-overlay" id="gameOverlay">
+                <div class="game-status">Waiting for opponent...</div>
+                <div class="player-info">
+                    <div class="player left">Player 1: <span id="player1Name">-</span></div>
+                    <div class="score"><span id="player1Score">0</span> - <span id="player2Score">0</span></div>
+                    <div class="player right">Player 2: <span id="player2Name">-</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Sidebar -->
+        <div class="game-sidebar">
+            <div class="game-info">
+                <h3>Game Information</h3>
+                <div class="info-item">
+                    <span class="label">Status:</span>
+                    <span class="value" id="gameStatus">Waiting</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Game Type:</span>
+                    <span class="value" id="gameType">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Duration:</span>
+                    <span class="value" id="gameDuration">00:00</span>
+                </div>
+            </div>
+
+            <div class="game-chat">
+                <h3>Game Chat</h3>
+                <div class="chat-messages" id="gameChatMessages"></div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type a message..." id="chatInput">
+                    <button class="button primary" id="sendChat">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

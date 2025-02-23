@@ -1,0 +1,72 @@
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="/assets/images/logo.svg" alt="ft_transcendence" class="logo">
+            <button class="mobile-close" id="closeSidebar">&times;</button>
+        </div>
+
+        <div class="user-profile-mini">
+            <img src="" alt="" class="user-avatar" id="userAvatar">
+            <div class="user-info">
+                <h3 id="userName">Loading...</h3>
+                <span class="status online" id="userStatus">Online</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="/dashboard" class="nav-item" data-page="dashboard">
+                <i class="material-icons">dashboard</i>
+                <span>Dashboard</span>
+            </a>
+            <a href="/game" class="nav-item" data-page="game">
+                <i class="material-icons">sports_esports</i>
+                <span>Play Game</span>
+            </a>
+            <a href="/chat" class="nav-item" data-page="chat">
+                <i class="material-icons">chat</i>
+                <span>Chat</span>
+                <span class="badge" id="unreadMessages">0</span>
+            </a>
+            <a href="/tournament" class="nav-item" data-page="tournament">
+                <i class="material-icons">emoji_events</i>
+                <span>Tournament</span>
+            </a>
+            <a href="/profile" class="nav-item" data-page="profile">
+                <i class="material-icons">person</i>
+                <span>Profile</span>
+            </a>
+            <a href="/settings" class="nav-item" data-page="settings">
+                <i class="material-icons">settings</i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="button secondary" id="logoutBtn">
+                <i class="icon-logout"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <button class="mobile-menu" id="openSidebar">
+                <i class="icon-menu"></i>
+            </button>
+            <div class="header-content">
+                <h1 id="pageTitle">Dashboard</h1>
+                <div class="quick-actions">
+                    <button class="button primary" id="quickPlay">Quick Play</button>
+                    <button class="button secondary" id="createTournament">Create Tournament</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content" id="mainContent">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </main>
+</div>

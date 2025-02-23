@@ -1,0 +1,30 @@
+:root {
+    /* Base Colors */
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-accent: #e74c3c;
+    --color-success: #27ae60;
+    --color-error: #c0392b;
+    
+    /* Background Colors */
+    --color-background: #ffffff;
+    --color-background-alt: #f8f9fa;
+    --color-background-hover: #f1f3f5;
+    
+    /* Text Colors */
+    --color-text: #2c3e50;
+    --color-text-light: #7f8c8d;
+    --color-text-inverse: #ffffff;
+    
+    /* Border Colors */
+    --color-border: #dfe6e9;
+    --color-border-light: #f1f3f5;
+    
+    /* Shadow Colors */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    /* Specific Component Colors */
+    --nav-background: #ffffff;
+    --sidebar-background: #ffffff;
+    --card-background: #ffffff;
+}

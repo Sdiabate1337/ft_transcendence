@@ -1,0 +1,65 @@
+<div class="chat-container">
+    <!-- Chat Sidebar -->
+    <div class="chat-sidebar">
+        <div class="chat-search">
+            <input type="text" placeholder="Search conversations..." id="chatSearch">
+        </div>
+        
+        <div class="chat-tabs">
+            <button class="tab-button active" data-tab="direct">Direct Messages</button>
+            <button class="tab-button" data-tab="groups">Groups</button>
+        </div>
+
+        <div class="chat-list" id="chatList">
+            <!-- Chat items will be dynamically added here -->
+        </div>
+
+        <div class="new-chat">
+            <button class="button primary" id="newChat">
+                <i class="material-icons">add</i> New Message
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Main -->
+    <div class="chat-main">
+        <!-- Default State -->
+        <div class="chat-welcome" id="chatWelcome">
+            <h2>Welcome to Chat</h2>
+            <p>Select a conversation or start a new one</p>
+        </div>
+
+        <!-- Active Chat State -->
+        <div class="chat-active" id="chatActive" style="display: none;">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <img src="" alt="" class="chat-user-avatar" id="chatUserAvatar">
+                    <div class="chat-user-details">
+                        <h3 id="chatUserName">User Name</h3>
+                        <span class="status" id="chatUserStatus">Online</span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="icon-button" id="startGame" title="Invite to Game">
+                        <i class="icon-game"></i>
+                    </button>
+                    <button class="icon-button" id="viewProfile" title="View Profile">
+                        <i class="icon-profile"></i>
+                    </button>
+                    <button class="icon-button" id="blockUser" title="Block User">
+                        <i class="icon-block"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="messagesList">
+                <!-- Messages will be dynamically added here -->
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" placeholder="Type a message..." id="messageInput">
+                <button class="button primary" id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
