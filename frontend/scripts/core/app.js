@@ -1,5 +1,6 @@
 import { authService } from '../services/auth.service.js';
 import { router } from './router.js';
+import { GameManager } from '../components/game.js';
 
 // Helper function to wrap content in dashboard layout
 async function withDashboardLayout(contentPromise) {
@@ -202,7 +203,7 @@ const components = {
     // Game view (protected)
     game: async () => {
         const response = await fetch('/views/dashboard/game.html');
-        return await response.text();
+        return  await response.text();
     },
 
     // Chat view (protected)

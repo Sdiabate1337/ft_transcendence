@@ -1,53 +1,112 @@
 <div class="game-container">
     <div class="game-header">
-        <h2>Pong Game</h2>
+        <div class="game-title">
+            <h2>PONG</h2>
+        </div>
         <div class="game-controls">
-            <button class="button primary" id="quickMatch">Quick Match</button>
-            <button class="button secondary" id="createCustom">Custom Game</button>
-            <button class="button accent" id="practiceAI">Practice with AI</button>
+            <button class="game-btn" id="quickMatch">Quick Match</button>
+            <button class="game-btn" id="createCustom">Custom Game</button>
+            <button class="game-btn" id="practiceAI">Practice AI</button>
         </div>
     </div>
 
     <div class="game-main">
-        <!-- Game Canvas Container -->
         <div class="game-canvas-container">
             <canvas id="gameCanvas"></canvas>
             <div class="game-overlay" id="gameOverlay">
                 <div class="game-status">Waiting for opponent...</div>
                 <div class="player-info">
-                    <div class="player left">Player 1: <span id="player1Name">-</span></div>
-                    <div class="score"><span id="player1Score">0</span> - <span id="player2Score">0</span></div>
-                    <div class="player right">Player 2: <span id="player2Name">-</span></div>
+                    <div class="player">
+                        <span id="player1Name">Player 1</span>
+                        <span id="player1Score">0</span>
+                    </div>
+                    <div class="score-divider"></div>
+                    <div class="player">
+                        <span id="player2Score">0</span>
+                        <span id="player2Name">Player 2</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Game Sidebar -->
         <div class="game-sidebar">
-            <div class="game-info">
-                <h3>Game Information</h3>
+            <div class="info-panel">
                 <div class="info-item">
-                    <span class="label">Status:</span>
+                    <span class="label">Status</span>
                     <span class="value" id="gameStatus">Waiting</span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Game Type:</span>
+                    <span class="label">Mode</span>
                     <span class="value" id="gameType">-</span>
                 </div>
                 <div class="info-item">
-                    <span class="label">Duration:</span>
+                    <span class="label">Time</span>
                     <span class="value" id="gameDuration">00:00</span>
                 </div>
             </div>
 
-            <div class="game-chat">
-                <h3>Game Chat</h3>
+            <div class="chat-panel">
                 <div class="chat-messages" id="gameChatMessages"></div>
                 <div class="chat-input">
-                    <input type="text" placeholder="Type a message..." id="chatInput">
-                    <button class="button primary" id="sendChat">Send</button>
+                    <input type="text" placeholder="Type message..." id="chatInput">
+                    <button id="sendChat">Send</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal" id="customGameModal">
+    <div class="modal-content">
+        <h3>Custom Game</h3>
+        <form id="customGameForm" onsubmit="return false;">
+            <div class="form-group">
+                <label for="gameMode">Mode</label>
+                <select id="gameMode" required>
+                    <option value="classic">Classic</option>
+                    <option value="powerups">Power-ups</option>
+                    <option value="doubles">Doubles</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="scoreLimit">Score Limit</label>
+                <input type="number" id="scoreLimit" min="1" max="21" value="11" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ballSpeed">Ball Speed</label>
+                <select id="ballSpeed" required>
+                    <option value="normal">Normal</option>
+                    <option value="fast">Fast</option>
+                    <option value="insane">Insane</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="visibility">Visibility</label>
+                <select id="visibility" required>
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                    <option value="friends">Friends Only</option>
+                </select>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancelCustomGame">Cancel</button>
+                <button type="button" class="btn-primary" id="createGameBtn">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+ <!-- Game component -->
+ <script type="module">
+    import { GameManager } from '/scripts/components/game.js';
+    
+    // Initialize the game component
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('Initializing game component...');
+        const game = new GameManager();
+    });
+</script>
